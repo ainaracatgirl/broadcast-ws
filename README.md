@@ -16,7 +16,7 @@ Once a WebSocket connection is open, the first `Client->Server` packet must be t
 {
     "clientID": "UUID v4 Client ID",
     "listens": [
-        /* Contains each Event ID this client wants to listen to */
+        
     ]
 }
 ```
@@ -25,15 +25,13 @@ Once a WebSocket connection is open, the first `Client->Server` packet must be t
 ```json
 {
     "event": "Event ID in the format specified below",
-    
-    /* Any custom properties can be sent with this packet */
 }
 ```
 
 ### Event ID format
-The **Event ID** in the **Data** packet must be in the format specified by the image below.
+The **Event ID** in the **Data** packet must be in the format specified below.
 
-![example:chat/message](img/event_id.png)
+**NAMESPACE**`:CATEGORY`*/EVENT*
 
 ## JS Library
 There's also a JS library found in this repo at `lib/broadcastws.min.js` that wraps the WebSocket connection and adds some new methods.
