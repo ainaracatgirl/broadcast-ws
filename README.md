@@ -1,9 +1,8 @@
 # broadcast-ws
 BroadcastWS - WebSocket event-based broadcast service.
 
-```
-⚠️ The service is hosted in Heroku and can have a cold-start of up to 10s
-```
+## Public-domain Server
+wss://relay.jdev.com.es/
 
 ## Structure
 
