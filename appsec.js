@@ -6,7 +6,7 @@ const fs = require('fs');
 const server = HttpsServer({
     cert: fs.readFileSync(process.env.BWS_CERT),
     key: fs.readFileSync(process.env.BWS_KEY)
-}, app);
+});
 
 const wss = new WebSocket.Server({ server });
 server.listen(443);
