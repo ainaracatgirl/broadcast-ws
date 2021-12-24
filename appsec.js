@@ -9,7 +9,6 @@ const server = HttpsServer({
 });
 
 const wss = new WebSocket.Server({ server });
-server.listen(443);
 
 wss.on('connection', (ws) => {
     ws.eventReady = false;
@@ -47,3 +46,5 @@ wss.on('connection', (ws) => {
         }
     });
 });
+
+server.listen(443);
