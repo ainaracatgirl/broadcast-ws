@@ -1,6 +1,7 @@
 const WebSocket = require('ws');
 const uuid = require('uuid');
 const HttpsServer = require('https').createServer;
+const fs = require('fs');
 
 const server = HttpsServer({
     cert: fs.readFileSync(process.env.BWS_CERT),
