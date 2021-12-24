@@ -1,7 +1,14 @@
 const WebSocket = require('ws');
 const uuid = require('uuid');
+const HttpsServer = require('https').createServer;
 
-const wss = new WebSocket.Server({ port: 80 });
+const server = HttpsServer({
+    cert: fs.readFileSync(process.env.BWS_CERT),
+    key: fs.readFileSync(process.env.BWS_KEY)
+}, app);
+
+const wss = new WebSocket.Server({ server });
+server.listen(443);
 
 wss.on('connection', (ws) => {
     ws.eventReady = false;
